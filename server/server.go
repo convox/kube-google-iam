@@ -544,6 +544,7 @@ func (s *Server) Run() error {
 	r.HandleFunc("/computeMetadata/v1/instance/", s.handleDiscovery)
 	r.HandleFunc("/computeMetadata/v1/instance/hostname", s.handleProxy)
 	r.HandleFunc("/computeMetadata/v1/instance/id", s.handleProxy)
+	r.HandleFunc("/computeMetadata/v1/instance/machine-type", s.handleProxy)
 	r.HandleFunc("/computeMetadata/v1/instance/zone", s.handleProxy)
 	r.HandleFunc("/computeMetadata/v1/instance/cpu-platform", s.handleProxy)
 	r.HandleFunc("/computeMetadata/v1/instance/attributes", s.handleSlashRedir)
